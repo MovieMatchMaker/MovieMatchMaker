@@ -3,6 +3,8 @@ import dotenv from "dotenv"
 import cors from "cors"
 import express from "express"
 import axios from "axios"
+import path, {dirname} from "path"
+import { fileURLToPath } from 'url'
 import mongoose from "mongoose"
 import matches from "./middleware/matches.js"
 import login from "./routes/login.js"
@@ -25,10 +27,19 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use(cors())
-app.use(express.static("public"))
+
+
+app.use(express.static('client/build'));
+app.get('*', (req, res) => {
+	const __filename = fileURLToPath(import.meta.url);
+	const __dirname = dirname(__filename);
+	res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	}
+);
+
 
 // Set headers for the the requests
-app.use(headers,)
+app.use(headers)
 // Track all the requests in the console
 app.use(tracker)
 // Log the user in, and return a token
@@ -78,7 +89,6 @@ mongoose
 	})
 	.then(() => console.log("MongoDB connection established..."))
 	.catch((error) => console.error("MongoDB connection failed:", error.message))
-
 
 const PORT = process.env.PORT
 

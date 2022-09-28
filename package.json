@@ -17,10 +17,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CS290-Final-Project-Team-24/TinderForMoviesV2/issues"
-  },
-  "homepage": "https://github.com/CS290-Final-Project-Team-24/TinderForMoviesV2#readme",
   "dependencies": {
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
