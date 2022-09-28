@@ -1,0 +1,449 @@
+#root {
+  padding-bottom: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  max-height: max-content;
+  overflow: hidden;
+  background: linear-gradient(180deg,rgb(192, 214, 245),#f88c8c);
+  /* fallback for old browsers 
+  Chrome 10-25, Safari 5.1-6
+  background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+  background-color: #f5aeae;
+  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#root>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row !important;
+}
+
+.row>* {
+  margin: 5px;
+}
+
+h1 {
+
+  text-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.30);
+}
+
+h2 {
+  color: #874356;
+  text-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.30);
+}
+
+.swipe {
+  position: absolute !important;
+}
+
+.cardContainer {
+  display: flex;
+  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+
+.card {
+  justify-content: center;
+  position: relative;
+  background-color: transparent;
+  width: 80vw;
+  max-width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  color: #fff;
+}
+
+.infoText {
+  width: 100%;
+  height: 28px;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  animation-name: popup;
+  animation-duration: 800ms;
+}
+
+.buttons {
+  position: relative;
+  transform: translateY(180%);
+}
+
+.bn39 {
+  background-color: rgb(255, 197, 225);
+  border-color: #ffd4e0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 4em;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 9em;
+  z-index: 2;
+  margin: 10px;
+  display: flex;
+  top: -24px;
+}
+
+.bn39:hover {
+  color: #fff;
+}
+
+.bn39 .bn39span {
+  align-items: center;
+  background: #F6E7D8;
+  color: #874356;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.bn39:hover .bn39span {
+  background: transparent;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(1, 1)
+  }
+
+  10% {
+    transform: scale(1.1, 1.1)
+  }
+
+  30% {
+    transform: scale(.9, .9)
+  }
+
+  50% {
+    transform: scale(1, 1)
+  }
+
+  57% {
+    transform: scale(1, 1)
+  }
+
+  64% {
+    transform: scale(1, 1)
+  }
+
+  100% {
+    transform: scale(1, 1)
+  }
+}
+
+
+/* CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(102, 40, 236, 0.4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  width: 200px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.bn39.move {
+  position: absolute;
+  top: 120px;
+  left: 430px;
+  width: fit-content;
+  height: min-content;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 80vw;
+  max-width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.5s linear;
+  transform-style: preserve-3d;
+}
+
+.spin {
+  transform: rotateY(180deg);
+} 
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  border-radius: 20px;
+  background-color: #ffd4e0;
+  color: #874356;
+  transform: rotateY(180deg);
+}
+
+.back-title {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+  font-size: 2.0vw;
+}
+
+.back-overview-wrapper{
+  word-wrap: break-word;
+  height: 30px;
+}
+
+.back-overview {
+  color: #874356;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  font-size: 1.2vw;
+}
+
+.back-img {
+  padding-right: 15px;
+  padding-top: 10px;
+  position: absolute;
+  right: 0;
+  z-index: 999;
+  width: fit-content;
+  height: fit-content;
+  background-color: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-img:hover{
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#hidden{
+  visibility: inherit;
+}
+
+
+.bn632-hover {
+  width: 205px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 85px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn27 {
+  background-image: linear-gradient(
+    to right,
+    #F5AEAE,
+    #f88181,
+    #e9bdf7df,
+    #fb90ae
+  );
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.congrats-bg {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #202020;
+  opacity: 0.55;
+  overflow: hidden; /* disable scrolling*/
+  z-index: 2; /* higher than all other items, but lower than the confirm box*/
+}
+
+.congrats-container {
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 40rem;
+  height: 40rem; */
+  top: 35%;
+  width: 40rem;
+  height: 17rem;
+
+  /* --m-background is set as inline style */
+  background: var(--m-background);
+
+  /* transform: translate(-50%, -75%);
+  border-radius: 0.3rem;
+  padding: 1rem; */
+  z-index: 5; /* Higher than the z-index of the background */
+}
+
+.congrats {
+
+  width: 40rem;
+  height: 17rem;
+  padding: 4rem 2rem;
+  border-radius: .8rem;
+
+  color: rgb(255, 255, 255);
+  background: radial-gradient(100% 100% at 100% 0, #5adaff 0, #f68bd2 100%);
+  box-shadow: rgb(127 95 194 / 40%) 0 4px 8px, rgb(168 128 255 / 30%) 0 7px 13px -3px, #d98ef5 0 -3px 0 inset;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.congrats-text {
+  padding: 0 0rem;
+  /* margin-top: 1rem; */
+  margin-bottom: 1rem;
+
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.ok-button-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0.1rem 0 0.1rem;
+  margin-bottom: 0rem;
+  text-align: center;
+}
+
+.matches-hyperlink:link {color: rgb(76, 64, 246);}
+.matches-hyperlink:visited {color: rgb(76, 64, 246);}
+.matches-hyperlink:hover {color: #FCFC0C}  
+
+/* .matches-hyperlink:link color: rgb(76, 64, 246); */
+
+/*   
+  a:visited {color: rgb(76, 64, 246);} 
+  a:hover {color: #FCFC0C}  
+  a:active {color: #C0F0FC}
+} */
