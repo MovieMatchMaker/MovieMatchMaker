@@ -300,3 +300,37 @@ button {
   }
 } 
 
+/* Iphone 5 */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)  {
+  
+    #logo {
+          position: absolute;
+          scale: 0.75;
+          top: 5px;
+          left: -25px;
+          font-size: 2.3rem;
+          color: #ffffff;
+    }
+
+}
+
+@media only screen 
+  and (min-device-width: 567px) 
+  and (max-device-width: 1024px)  {
+  
+    #logo {
+            position: absolute;
+            scale: 0.7;
+            top: 5px;
+            left: -35px;
+            font-size: 2.3rem;
+            color: #ffffff;
+      }
+    
+  
+  
+  }

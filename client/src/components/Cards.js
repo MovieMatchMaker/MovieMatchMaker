@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import TinderCard from "react-tinder-card";
 import "../styles/Cards.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { animations } from "react-animation";
 import "react-animation/dist/keyframes.css";
 import Nav from "./NavigationBar";
@@ -276,10 +276,7 @@ export default function Cards() {
 			updateCurrentIndex(index + 1);
 
 			childRefs[currentIndex].current.swipe(dir)
-
-			// setTimeout(fun => {
 			renderCurrentMovie(db[db.length - 1].id);
-			// },3000);
 		}
 
 		if (dir === "left") {
@@ -492,7 +489,7 @@ export default function Cards() {
 			<div className="congrats-container">
 				<div className="congrats">
 					<div className="congrats-text">
-					Congrats, you've matched with the movie! It's been added to your <a className= "matches-hyperlink" href="http://localhost:3000/matches" target="_blank" rel="noreferrer"> collection</a> and
+					Congrats, you've matched with the movie! It's been added to your {<Link className="matches-hyperlink" to="/matches">collection</Link>} and
 					you can also watch it here: <a className= "matches-hyperlink" href={`https://nyumatflix.herokuapp.com/movies/${id.value}`} target="_blank" rel="noreferrer"> nyumatflix</a>. 
 					</div>
 					<div className="ok-button-container">
@@ -504,27 +501,27 @@ export default function Cards() {
 					</div>
 				</div>
 			</div>
-			
+
 			<div className='buttons'>
 				<button 
 					id="swipe-left-button"
 					className="bn632-hover bn27"
-					onClick={() => swipe("left", currentIndex, false) && !isActive ? toggleFront() : null}>
-					⬅️ Swipe Left
+					onClick={() =>swipe("left", currentIndex, false) && !isActive ? toggleFront() : null}>
+					Swipe Left
 				</button>
 
 				<button 
 					id="match-button"
-					className="bn632-hover bn27"
+					className="match-button bn632-hover bn27"
 					onClick={() => swipe("right", currentIndex, true) && !isActive ? toggleFront() : null}>
-					Match ⭐
+					Match
 				</button>
 
 				<button 
 					id="swipe-right-button"
 					className="bn632-hover bn27"
 					onClick={() => swipe("right", currentIndex, false) && !isActive ? toggleFront() : null}>
-					Swipe Right ➡️
+					Swipe Right
 				</button>
 			</div>
 		</div>

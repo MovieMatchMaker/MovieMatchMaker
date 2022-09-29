@@ -73,6 +73,8 @@
 
 }
 
+
+
 .menuOpen:hover .open:before {
       top: -9px;
 }
@@ -232,3 +234,44 @@ nav {
           transition: all .5s ease;
 
 } */
+
+/* Iphone 5 */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)  {
+  
+      .menuOpen {
+            transform: scale(1.4);
+            position: absolute;
+            top: 35px;
+            right: 15px;
+            display: block;
+            cursor: pointer;
+      }
+
+      .menu {
+            height: 110vh;
+      }
+
+}
+
+@media only screen 
+  and (min-device-width: 567px) 
+  and (max-device-width: 1024px)  {
+
+      .menuOpen {
+            transform: scale(1.5);
+            position: absolute;
+            top: 35px;
+            right: 25px;
+            display: block;
+            cursor: pointer;
+      }
+
+      .menu {
+            height: 110vh;
+      }
+
+  }
