@@ -81,7 +81,7 @@ app.post("/api/get_movie", (req, res) => {
 		})
 })   
 
-const uri = process.env.URI
+const uri = process.env.REACT_APP_URI
 mongoose
 	.connect(uri, {
 		useNewUrlParser: true,
@@ -90,7 +90,7 @@ mongoose
 	.then(() => console.log("MongoDB connection established..."))
 	.catch((error) => console.error("MongoDB connection failed:", error.message))
 
-const PORT = process.env.PORT
+const PORT = process.env.REACT_APP_PORT
 
 app.listen(PORT, () => {
 	console.log(`Server started on port ${PORT}`)
