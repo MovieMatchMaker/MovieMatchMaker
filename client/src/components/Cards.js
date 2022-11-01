@@ -12,6 +12,7 @@ import { addMatch, addSeen, saveMatch, setNewSeenMovie, initLogin} from "../slic
 import ReactCanvasConfetti from "react-canvas-confetti";
 
 import introJs from "intro.js";
+import "intro.js/introjs.css"; 
 
 var intro = introJs();
 
