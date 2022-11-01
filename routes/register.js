@@ -18,8 +18,6 @@ router.post("/", async (req, res) => {
 	let user = await User.findOne({ username: req.body.username })
 	if (user) return res.status(400).send("User already exists...")
 
-	console.log("here")
-
 	const { username, password } = req.body
 	const matches = []
 

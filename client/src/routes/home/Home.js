@@ -6,6 +6,7 @@ import "../../styles/Home.css";
 import NavigationBar from "../../components/NavigationBar";
 import {Fade} from 'react-reveal';
 import { useInView } from "react-cool-inview";
+import { useSelector } from "react-redux";
 
 
 
@@ -14,6 +15,7 @@ export default function Home() {
 	const getRandomFrom = (array) =>
 		array[Math.floor(Math.random() * array.length)];
 	const [randomEmoji, setRandomEmoji] = useState(getRandomFrom(emojis));
+	const username = useSelector((state) => state.auth.username);
 
 	const { observe, inView } = useInView({
 	// Stop observe when the target enters the viewport, so the "inView" only triggered once
@@ -60,6 +62,10 @@ export default function Home() {
 					<span className='ms'>M</span>
 					atch<span className='ms'>M</span>aker
 				</h1>
+
+				<h1>
+					Welcome Back, {username}!
+				</h1>
 				
 				<Link to='/swipe'>
 					<div
@@ -102,7 +108,7 @@ export default function Home() {
 
 					<ul className="text-list">
 						<h1 className="top-text" ref={observe}>
-							{inView &&  <Fade bottom>FIND YOUR MATCH 
+							{inView &&  <Fade bottom>FIND. YOUR. MATCH.
 							<AnimateOnChange
 									animationIn='popIn'
 									animationOut='popOut'>
@@ -129,6 +135,8 @@ export default function Home() {
 				
 
 				<br></br><br></br>
+
+				<div className="wrapper-btn">
 				<Link to='/signup'>
 					<div
 						style={{ animation: animations.fadeInUp }}
@@ -152,6 +160,7 @@ export default function Home() {
 						</button>
 					</div>
 				</Link>
+				</div>
 
 					{/* <HomeCards /> */}
 

@@ -4,8 +4,8 @@
      font-size: 4.5rem;
      font-weight: bold;
      position: relative;
-     font-family: Campton-Bold, sans-serif;
-     color: #ffffff;
+     margin: 0 auto;
+     
 }
 
 #logo {
@@ -117,19 +117,19 @@ button {
 
 .top-text {
   font-size: 3.0rem;
-  margin-left: 80px;
-  margin-right: 80px;
+  /* margin-left: 80px;
+  margin-right: 80px; */
 }
 
 .bottom-text {
   font-size: 1.9rem;
-  margin-left: 80px;
-  margin-right: 80px;
+  /* margin-left: 80px;
+  margin-right: 80px; */
 }
 .mid-text {
   font-size: 1.9rem;
-  margin-left: 280px;
-  margin-right: 280px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 .base-text {
   font-size: 1.9rem;
@@ -316,6 +316,40 @@ button {
           color: #ffffff;
     }
 
+    #welcome-header {
+      font-size: calc(1.5rem + 1vw);
+      font-weight: bold;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+    }
+
+    #button-container {
+      scale: calc(0.75 + 1vw);
+    }
+
+    .text-list {
+      margin: 5px;
+      width: min-content;
+      display: flex; 
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    #button-container {
+      padding-bottom: 20px;
+    }
+
+    .wrapper-btn {
+      position: relative;
+      transform: translateY(-60px);
+    }
+
+    
+
 }
 
 @media only screen 
@@ -330,6 +364,29 @@ button {
             font-size: 2.3rem;
             color: #ffffff;
       }
+
+      /* .top-text {
+        font-size: 3.0rem;
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+
+      .bottom-text {
+        font-size: 1.9rem;
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+      .mid-text {
+        font-size: 1.9rem;
+        margin-left: 280px;
+        margin-right: 280px;
+      }
+      .base-text {
+        font-size: 1.9rem;
+        margin-left: 300px;
+        margin-right: 300px;
+      } */
+
     
   
   

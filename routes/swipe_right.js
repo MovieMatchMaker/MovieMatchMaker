@@ -20,8 +20,7 @@ router.post("/", async (req, res) => {
 		let newMovie = {}
 
 		let response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&sort_by=revenue.desc&include_adult=false&include_video=false&page=${getRandomArbitrary(1,10)}&vote_average.gte=${getRandomArbitrary(4,9)}&with_original_language=en&with_watch_monetization_types=flatrate&with_genres=${genre_ids}`)
-		console.log(response.data)
-            
+		//console.log(response.data)
 		let movies = response.data.results
 
 		for (let i = 0; i < movies.length; i++) {

@@ -72,7 +72,7 @@ export const initLogin = createAsyncThunk(
       const initLogin = await axios.post(`api/init_login`, {
         username: values.username,
       });
-      console.log(initLogin);
+      //console.log(initLogin);
       return initLogin.data.initLogin;
     }
     catch (err) {
@@ -123,7 +123,7 @@ export const getUserMatches = createAsyncThunk(
       const matches = await axios.post(`api/matches`, {
         username: values
       });
-      console.log(matches);
+      //console.log(matches);
       return matches.data;
     } catch (error) {
       console.log(error.response);
@@ -136,7 +136,6 @@ export const saveMatch = createAsyncThunk(
   "auth/saveMatch",
   async (values, { rejectWithValue }) => {
     try {
-      console.log(values);
       const match = await axios.post(`api/save_match`, {
         username: values.username,
         match: values.match,
@@ -154,7 +153,7 @@ export const deleteAllMatches = createAsyncThunk(
   async (values, { rejectWithValue }) => {
     try {
       const match = await axios.post(`api/delete_matches`, {
-        username: values.username
+        username: values.username,
       });
       return match;
     } catch (error) {
@@ -194,6 +193,19 @@ export const getUser = createAsyncThunk(
   }
 );
 
+export const deleteSeenAll = createAsyncThunk(
+  "auth/deleteSeenAll",
+  async (values, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(`/api/clear_seen`, { values });
+      return response.data
+    } catch (err) {
+      console.log(err) 
+      return rejectWithValue(err.response.data);
+    }
+  }
+)
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -207,7 +219,7 @@ const authSlice = createSlice({
     },
 
     deleteAllSeenMovies: (state, action) => {
-      state.seen =  [];
+      state.seen =  action.payload
     },
 
     removeMatch (state, action) {
@@ -352,7 +364,7 @@ const authSlice = createSlice({
     builder.addCase(loginUser.fulfilled, (state, action) => {
       if (action.payload) {
         const user = jwtDecode(action.payload);
-        console.log(user);
+        //console.log(user);
         return {
           ...state,
           token: action.payload,

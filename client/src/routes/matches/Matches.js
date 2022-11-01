@@ -6,7 +6,7 @@ import "../../styles/loading.css";
 import { animations, AnimateGroup } from "react-animation";
 import "react-animation/dist/keyframes.css";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAllMatches, deleteSingleMatch, removeMatch } from "../../slices/authSlice";
+import { deleteAllMatches, deleteAllSeenMovies, deleteSeenAll, deleteSingleMatch, removeMatch } from "../../slices/authSlice";
 
 var options = {
 	year: "numeric",
@@ -32,6 +32,13 @@ function Matches() {
 		dispatch(deleteSingleMatch(request));
 	};
 
+	const handleDeleteAllSeen = (e) => {
+		let req_body = {}
+		req_body.username = username;
+		dispatch(deleteAllSeenMovies([]));
+		dispatch(deleteSeenAll(req_body.username))
+	}
+
 	const deleteAll = (e) => {
 		e.preventDefault();
 		let request = {}
@@ -40,6 +47,12 @@ function Matches() {
 	}
 
 	const parseText = (text) => {
+		if (!text) return "No description provided 😢";
+
+		if (!text.length) {
+			return "No description provided 😢";
+		}
+
 		let max = 60;
 		if (text.length < 1){
 			return "No description provided 😢"
@@ -123,7 +136,7 @@ function Matches() {
 	)
 
 	const ShowDeleteButton = () => (
-		<a><button className="bn632-hover bn28" onClick={deleteAll}>Delete All</button></a>
+		<a><button className="bn632-hover bn28" onClick={deleteAll}>Delete All Matches</button></a>
 	)
 
 	const ListCollection = () => (
@@ -148,6 +161,7 @@ function Matches() {
 			<br></br>
 			<br></br>
 			<br></br>
+			<a><button className="bn632-hover bn28" onClick={handleDeleteAllSeen}>Reset Seen Movies</button></a>
 			{matches.length > 0 ? ShowNumOfMatches() : null}		{/* show "your matches" */}
 			{matches.length > 0 ? ShowDeleteButton() : null}		{/* show "delete all" */}
 			{matches.length > 0 ? ListCollection() : NoMatches()}	{/* show list or 404 */}

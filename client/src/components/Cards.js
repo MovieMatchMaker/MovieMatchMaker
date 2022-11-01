@@ -324,7 +324,10 @@ export default function Cards() {
 	}
 
 	const parseText = (text) => {
-		if (text.length < 1){
+
+		if (!text) return "No description provided 😢";
+
+		if (!text.length){
 			return "No description provided 😢"
 		}
 
