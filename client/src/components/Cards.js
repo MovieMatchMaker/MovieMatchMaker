@@ -493,7 +493,7 @@ export default function Cards() {
 			<div className="congrats-container">
 				<div className="congrats">
 					<div className="congrats-text">
-					Congrats, you've matched with the movie! It's been added to your {<Link className="matches-hyperlink" to="/matches">collection</Link>} and
+					Congrats, you've matched with the movie! It's been added to your {<Link className="matches-hyperlink" to={"/matches"}>collection</Link>} and
 					you can also watch it here: <a className= "matches-hyperlink" href={`https://nyumatflix.herokuapp.com/movies/${id.value}`} target="_blank" rel="noreferrer"> nyumatflix</a>. 
 					</div>
 					<div className="ok-button-container">

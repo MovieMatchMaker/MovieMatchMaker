@@ -129,6 +129,7 @@ function Matches() {
 
 	useEffect(() => {
 		setMatches(storedMatches);
+		document.body.style.overflow = "scroll";
 	}, [storedMatches]);
 
 	const ShowNumOfMatches = () => (
