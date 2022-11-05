@@ -1,7 +1,8 @@
  <h3 align="center"><img width="800" height="200" src="movie_matchmaker.png">
   <br>
  <p align ="center">
-  <b><i>By Tom Nyuma, Artem Kolpakov, and Daniel Zahariev</i></b>
+  <b><i>By Tom Nyuma, Artem Kolpakov, and Daniel Zahariev</i></b> <br>
+  <a href="https://moviematchmaker-app.herokuapp.com/">Hosted with ♡ on Heroku!</a>
 </p>
     <p align="center">
       <img width="100" height="30" src="https://badges.aleen42.com/src/react.svg">
@@ -100,7 +101,7 @@ You can now run a devlopment environment with Hot Module Replacement by navigati
 npm run dev
 ```
 
-Or you could just watch a [demo](https://drive.google.com/file/d/1Ml4DUwqGsJUOtaRiTPDloRr0rATGGXKh/view?usp=sharing) of how our app currently works before it's fully ready to be deployed. 🤫
+Or you could just watch a [demo](https://drive.google.com/file/d/1Ml4DUwqGsJUOtaRiTPDloRr0rATGGXKh/view?usp=sharing) of how our app works!
 
 ### Happy Swiping, and Go Beavs! 🦦 
 
@@ -115,6 +116,6 @@ Or you could just watch a [demo](https://drive.google.com/file/d/1Ml4DUwqGsJUOta
 - [x] File Seperation
 - [x] Connect MongoDB 
 - [x] Style Each Route
-- [ ] Incorporate the Recommendation Algorithm
+- [x] Incorporate the Recommendation Algorithm
 - [x] Finish Documentation
 - [x] Figure out data collection
